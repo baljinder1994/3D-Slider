@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful 3D Slider with Larger Images</title>
+    <style>
+                body {
+            background: linear-gradient(135deg, #edf348, #e74c3c);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .slider {
+            perspective: 1200px;
+            width: 400px; /* Increased width */
+            height: 300px; /* Increased height */
+            margin: 100px auto;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotation 6s linear infinite;
+        }
+
+        .slide {
+            width: 150px; /* Increased width */
+            height: 200px; /* Increased height */
+            position: absolute;
+            background: linear-gradient(45deg, #ff6347, #ff69b4);
+            text-align: center;
+            line-height: 200px;
+            font-size: 36px; /* Increased font size */
+            color: white;
+            border-radius: 10px; /* Increased border radius */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .slide:nth-child(2) {
+            transform: rotateY(60deg) translateZ(200px); /* Increased translateZ */
+        }
+
+        .slide:nth-child(3) {
+            transform: rotateY(120deg) translateZ(200px); /* Increased translateZ */
+        }
+
+        .slide:nth-child(4) {
+            transform: rotateY(180deg) translateZ(200px); /* Increased translateZ */
+        }
+
+        .slide:nth-child(5) {
+            transform: rotateY(240deg) translateZ(200px); /* Increased translateZ */
+        }
+
+        .slide:nth-child(6) {
+            transform: rotateY(300deg) translateZ(200px); /* Increased translateZ */
+        }
+
+        @keyframes rotation {
+            0%, 100% {
+                transform: rotateY(0deg);
+            }
+            16.666% {
+                transform: rotateY(60deg);
+            }
+            33.333% {
+                transform: rotateY(120deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            66.666% {
+                transform: rotateY(240deg);
+            }
+            83.333% {
+                transform: rotateY(300deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="carousel">
+             <img src="fish.jpg"class="slide">
+            <img src="fl.jpg"class="slide">
+            <img src="images/baby.jpg"class="slide">
+            <img src="hel.jpg"class="slide">
+            <img src="hh.jpg"class="slide">
+            <img src="cu.jpg"class="slide"> </div></div>
+    </div>
+</body>
+</html>
